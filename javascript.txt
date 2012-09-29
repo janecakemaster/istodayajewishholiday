@@ -1,0 +1,213 @@
+//<Script>
+	var NISAN = 1;
+	var IYYAR = 2;
+	var SIVAN = 3;
+	var TAMUZ = 4;
+	var AV = 5;
+	var ELUL = 6;
+	var TISHREI = 7;
+	var CHESHVAN = 8;
+	var KISLEV = 9;
+	var TEVET = 10;
+	var SHVAT = 11;
+	var ADAR_I = 12;
+	var ADAR_II = 13;
+
+	var JAN = 1;
+	var FEB = 2;
+	var MAR = 3;
+	var APR = 4;
+	var MAY = 5;
+	var JUN = 6;
+	var JUL = 7;
+	var AUG = 8;
+	var SEP = 9;
+	var OCT = 10;
+	var NOV = 11;
+	var DEC = 12;
+	
+ var MonthLengths = new Array()
+ 	MonthLengths[0] = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+	MonthLengths[1] = [0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+
+/* Absolute Date Conversions */
+function heb2Abs(tDay, tMonth, tYear){ //Hebrew Date to Absolute Number - 
+  var m;
+  var tAbs = tDay;
+
+  if (tMonth < TISHREI)
+	{
+		for (m = TISHREI; m <= MonthsInHebYear (tYear); m++){
+			tAbs += DaysInHebMonth (m, tYear);
+		}
+		for (m = NISAN; m < tMonth; m++){
+			tAbs += DaysInHebMonth (m, tYear);
+		}
+	}
+  else
+	{
+		for (m = TISHREI; m < tMonth; m++){
+			tAbs += DaysInHebMonth (m, tYear);
+		}
+	}
+  ret = hebElapsedDays (tYear) - 1373429 + tAbs;
+  return ret;
+}
+
+function greg2abs(tDay, tMonth, tYear){
+	var absDayOfYear = dayOfYear(tDay, tMonth, tYear);
+	
+	return Math.round(parseInt(absDayOfYear) + parseInt(365) * parseInt(tYear - 1) + Math.round(parseInt((tYear - 1) / 4) - parseInt((tYear - 1) / 100) + parseInt((tYear - 1) / 400)));
+	//return Math.round(parseInt(absDayOfYear) + parseInt(365) * parseInt(tYear - 1)	+ parseInt((tYear - 1) / 4	 - (tYear - 1) / 100	+ (tYear - 1) / 400));
+//  return Math.round(absDayOfYear + Math.round((365 * (tYear - 1)) + Math.round(parseInt((tYear - 1) / 4) - ((tYear - 1) / 100) + ((tYear - 1) / 400))));
+}
+
+function abs2greg(absDate)
+{
+  var day, year, month, mlen;
+  var tDay, tMonth, tYear;
+  var d0, n400, d1, n100, d2, n4, d3, n1;
+
+  d0 = parseInt(absDate - 1);
+  n400 = parseInt(d0 / 146097);
+  d1 = parseInt(d0 % 146097);
+  n100 = parseInt(d1 / 36524);
+  d2 = parseInt(d1 % 36524);
+  n4 = parseInt(d2 / 1461);
+  d3 = parseInt(d2 % 1461);
+  n1 = parseInt(d3 / 365);
+
+  day = ((d3 % 365) + 1);
+  year = (parseInt(400 * n400) + parseInt(100 * n100) + parseInt(4 * n4) + n1);
+
+  
+  if (4 == n100 || 4 == n1)
+	{
+		tMonth = 12;
+		tDay = 31;
+		tYear = year;
+		return new Date(tYear,new Number(tMonth)-1,tDay);
+	}
+  else
+	{
+		year++;
+		month = 1;
+		while ((mlen = MonthLengths [(leap (year) ? 1 : 0)][month]) < day)
+		{
+			day -= mlen;
+			month++;
+		}
+		tYear = year;
+		tMonth = month;
+		tDay = day;
+		
+		return new Date(tYear,new Number(tMonth)-1,tDay);
+	}
+}
+
+function abs2heb(absDate)
+{
+	var mmap = [9, 10, 11, 12, 1, 2, 3, 4, 7, 7, 7, 8];
+	var hebdate = new DateObj(), gregdate; //as date
+	var day, month, year; //as int
+	
+	var gregdate = abs2greg(absDate);
+	hebdate.day = 1;
+	hebdate.month = 7;
+	month = mmap[gregdate.getMonth()];
+	year = 3760 + gregdate.getFullYear();
+	
+	while (hebdate.year = year + 1, absDate >= heb2Abs(hebdate.day, hebdate.month, hebdate.year))
+		year++;
+	
+	while (hebdate.month = month, hebdate.day = DaysInHebMonth(month, year), hebdate.year = year, absDate > heb2Abs(hebdate.day, hebdate.month, hebdate.year))
+		month = (month % MonthsInHebYear (year)) + 1;
+	
+	hebdate.day = 1;
+	
+	day = parseInt((absDate - heb2Abs(hebdate.day, hebdate.month, hebdate.year)) + 1);
+	hebdate.day = day;
+	
+	return (hebdate.day + ' ' + hebdate.month + ' ' + hebdate.year);
+}
+
+function dayOfYear(tDay, tMonth, tYear){
+	var dOY = tDay + 31 * (tMonth - 1);
+	if (tMonth > FEB)
+	{
+		dOY -= parseInt((4 * tMonth + 23) / 10);
+		if (leap (tYear))
+			dOY++;
+	}
+	return dOY;
+}
+
+function leap(y) {
+	return ((y % 400 == 0) || (y % 100 != 0 && y % 4 == 0));
+}
+
+/* Hebrew Calendar Functions */
+function DaysInHebMonth(month,year){
+    if (month == IYYAR || month == TAMUZ || month == ELUL ||
+       month == TEVET || month == ADAR_II ||
+       (month == ADAR_I && !HebLeapYear (year)) ||
+       (month == CHESHVAN && !long_cheshvan (year)) ||
+       (month == KISLEV && short_kislev (year)))
+      return 29;
+   else
+      return 30;
+}
+
+function long_cheshvan(year){
+	return ((daysInHebYear (year) % 10) == 5);
+}
+
+function short_kislev(year){
+	return ((daysInHebYear (year) % 10) == 3)
+}
+
+function MonthsInHebYear(tYear){
+	return (HebLeapYear(tYear) ? 13 :12);
+}
+
+function daysInHebYear(year){
+	return parseInt(hebElapsedDays (year + 1) - hebElapsedDays (year));
+}
+
+function HebLeapYear(tYear){
+	return ((1 + tYear * 7) % 19 < 7);
+}
+
+function hebElapsedDays(year){
+ var yearl, m_elapsed, p_elapsed, h_elapsed, parts, day, alt_day;
+
+  yearl = year;
+
+  m_elapsed = parseInt(235 * parseInt((yearl - 1) / 19) + parseInt(12 * ((yearl - 1) % 19)) + (parseInt(((yearl - 1) % 19) * 7) + 1) / 19);
+
+  p_elapsed = parseInt(204 + (793 * (m_elapsed % 1080)));
+
+  h_elapsed = parseInt(5 + parseInt((12 * m_elapsed)) + parseInt(793 * parseInt((m_elapsed / 1080)) + parseInt(p_elapsed / 1080)));
+
+  parts = parseInt((p_elapsed % 1080) + parseInt(1080 * (h_elapsed % 24)));
+
+  day = parseInt(1 + 29 * m_elapsed + parseInt(h_elapsed / 24));
+
+  if ((parts >= 19440) ||
+  	  ((2 == (day % 7)) && (parts >= 9924) && !(HebLeapYear (year))) ||
+      ((1 == (day % 7)) && (parts >= 16789) && HebLeapYear (year - 1)))
+    alt_day = day + 1;
+  else
+    alt_day = day;
+
+  if ((alt_day % 7) == 0 ||
+      (alt_day % 7) == 3 ||
+      (alt_day % 7) == 5)
+    return alt_day + 1;
+  else
+    return alt_day;
+}
+
+function DateObj() {this.day = 0;this.month = 0;this.year = 0;}
+//</script>
