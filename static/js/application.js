@@ -4,8 +4,8 @@ $(function(){
 	greg_month = date.getMonth();
 	greg_day = date.getDay();
 	greg_date = date.getDate();
-	greg_month = 4;
-	greg_date = 27;
+	// greg_month = 4;
+	// greg_date = 27;
 	isHoliday = false;
 	time = date.getTime();
 	$.ajax({
