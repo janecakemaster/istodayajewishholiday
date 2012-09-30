@@ -1,0 +1,3 @@
+{'Rosh Hashanna Start': [1, 'Tishrei'], 
+'Rosh Hashanna End': [2, 'Tishrei']
+}
