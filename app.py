@@ -18,11 +18,11 @@ def index():
 	return redirect(url_for('static', filename='index.html'))
 
 def get_holidays():
-	year = int(request.args['greg_year'])
+	# year = int(request.args['greg_year'])
+	year = 2013
 	greg_dates = {}
 	for name, hebdate in hebdates.iteritems():
-		greg_dates[name] = [hebdate[0], hebdate[1]]
-		h.hebrew_to_gregorian(year, hebdate[0], hebdate[1])
+		greg_dates[name] = h.hebrew_to_gregorian(year, hebdate[0], hebdate[1])
 	return greg_dates
 
 @app.route('/static/<path:file_path>')
