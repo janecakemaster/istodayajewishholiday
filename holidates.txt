@@ -1,16 +1,28 @@
 Jewish holiday Jewish dates
 
 Tu B'Shevat - 15 Shevat
-Ta'anit Esther - 11th or 13th of Adar
+	2 days all-inclusive
+Ta'anit Esther - 11th or 13th of Adar (13th unless 13th falls on Shabbat [Saturday], when it is celebrated on preceding Thursday)
+	1 day
 Purim - 14 Adar
-Passover - 15 Nisan - 22 Nisan
+	2 days
+Passover - 15 Nisan to 21 Nisan
+	7 days
 Lag B'Omer - 18 Iyar
-Shavuot - 6 Sivan - 7 Sivan
-Rosh Hashanah - 1 Tishrei
-Yom Kippur - 10 Tishrei
+	1 day
+Shavuot - 6 Sivan to 7 Sivan
+	2 days
+Rosh Hashanah - sunrise 1 to sunset 2 Tishrei
+	2 days
+Yom Kippur - sunset 10 Tishrei - sunset 11 Tishrei
+	2 days
 Sukkot - 15 Tishrei - 22 Tishrei
+	8 days
 Hoshana Rabbah - 21 Tishrei (end of Sukkot sort of)
+	1 day
 Shemini Atzeret - 22 Tishrei (also the end of Sukkot?)
+	1 day
 Simchat Torah - 23 Tishrei (also also the end of Sukkot)
-Hanukkah - 25 Kislev - 8 days later (depends on length of Kislev)
-	ends either 2 or 3 Tevet
+	1 day
+Hanukkah - 25 Kislev - 8 days later (depends on length of Kislev, ends either 2 or 3 Tevet)
+	8 days
