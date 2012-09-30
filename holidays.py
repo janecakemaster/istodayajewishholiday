@@ -384,6 +384,15 @@ class Holidays:
         gd = self.hebrew_to_gregorian(self.time_list[YEAR], Kislev, 25)
         self.time_list[MONTH] = gd[MONTH]
         self.time_list[DAY] = gd[DAY]
+
+    def set_hanukkah(self, year=None):
+        # need an algorithm to comute gregorian first day...
+        if year:
+            self.set_year(year)
+            
+        gd = self.hebrew_to_gregorian(self.time_list[YEAR], Kislev, 25)
+        self.time_list[MONTH] = gd[MONTH]
+        self.time_list[DAY] = gd[DAY]
         
     
     def set_hanukkah_eve(self, year=None):
