@@ -23,8 +23,9 @@ $(function(){
 					if (currm===greg_month && currd===greg_date && isHoliday===false) {
 						isHoliday=true;
 						$("#yesno").html("Yes");
-						line = "<a href\"https://www.google.com/search?q=key\">" + key + "</a>";
-						$("#extras").html(key);
+						line = "<a href=\"https://www.google.com/search?q=" + key + "\">" + key + "</a>";
+						console.log(line);
+						$("#extras").html(line);
 					};					
 				}
 			}
