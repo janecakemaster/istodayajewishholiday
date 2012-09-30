@@ -7,7 +7,7 @@ $(function() {
       date: new Date()
     },
     success: function(data) {
-      return $('.inject-target').html('data');
+      return $('.inject-target').html(data);
     }
   });
 });

@@ -1,25 +1,23 @@
 body{
-	font-family: "Helvetica", "Helvetica Neue", "Arial", "sans-serif";
-	color: #FFF;
-	background-color: #000;
-}
-
-div{
+  font-family: "Helvetica", "Helvetica Neue", "Arial", "sans-serif";
+  color: #FFF;
+  background-color: #000;
 }
 
 a{
 }
 
 #container{
-	text-align: center;
+  text-align: center;
 }
 
-#maintext{
-	font-size: 150px;
-	font-weight: bold;
+#container p{
+  font-size: 150px;
+  font-weight: bold;
+  vertical-align: middle;
+  line-height: 2em;
 }
 
-#myoutercontainer { position:relative }
-
-#myinnercontainer { position:absolute;top:50%; height:10em; margin-top:-5em } 
-#myoutercontainer2 {line-height:35em }
+#extras{
+  position: relative;
+}
