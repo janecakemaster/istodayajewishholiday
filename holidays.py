@@ -413,6 +413,11 @@ class Holidays:
         self.adjust_date()
 
 
+    def set_rosh_hashanah_end(self, year=None):
+        self.set_rosh_hashanah(year)
+        self.time_list[DAY] += 1
+        self.adjust_date()
+
     def set_yom_kippur(self, year=None):
         if year:
             self.set_year(year)
