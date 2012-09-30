@@ -10,4 +10,4 @@ $ ->
     data: # This is the data that is sent to flask and can be accessed through the request object in flask
       date: new Date() # Sends the current date/
     success: (data) ->
-      $('.inject-target').html 'data' # Inject the data from flask in into the element with inject-target class.
+      $('.inject-target').html data # Inject the data from flask in into the element with inject-target class.
