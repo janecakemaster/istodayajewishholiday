@@ -19,7 +19,7 @@ a{
 	font-weight: bold;
 }
 
-/*#myoutercontainer { position:relative }
+#myoutercontainer { position:relative }
 
-#myinnercontainer { position:absolute;top:50%; height:10em; margin-top:-5em } */
-#myoutercontainer2 { line-height:35em }
+#myinnercontainer { position:absolute;top:50%; height:10em; margin-top:-5em } 
+#myoutercontainer2 {line-height:35em }
