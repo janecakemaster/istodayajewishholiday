@@ -1,29 +1,28 @@
-Jewish holiday Jewish dates
+{
+'Tu B'Shevat': [15, 'Shevat', 2], 
 
-Tu B'Shevat - 15 Shevat
-	2 days all-inclusive
-Ta'anit Esther - 11th or 13th of Adar (13th unless 13th falls on Shabbat [Saturday], when it is celebrated on preceding Thursday)
-	1 day
-Purim - 14 Adar
-	2 days
-Passover - 15 Nisan to 21 Nisan
-	7 days
-Lag B'Omer - 18 Iyar
-	1 day
-Shavuot - 6 Sivan to 7 Sivan
-	2 days
-Rosh Hashanah - sunrise 1 to sunset 2 Tishrei
-	2 days
-Yom Kippur - sunset 10 Tishrei - sunset 11 Tishrei
-	2 days
-Sukkot - 15 Tishrei - 22 Tishrei
-	8 days
-Hoshana Rabbah - 21 Tishrei (end of Sukkot sort of)
-	1 day
-Shemini Atzeret - 22 Tishrei (also the end of Sukkot?)
-	1 day
-Simchat Torah - 23 Tishrei (also also the end of Sukkot)
-	1 day
-Hanukkah - 25 Kislev - 8 days later (depends on length of Kislev, ends either 2 or 3 Tevet)
-	8 days
->>>>>>> 8b78956261e5642d32017bc97fbae51d5f93aadf
+'Ta'anit Esther': [13, 'Adar', 1], 
+
+'Purim': [14, 'Adar', 2],
+
+'Passover': [15, 'Nisan', 7], 
+
+'Lag B'Omer': [18, 'Iyar', 1],
+
+'Shavuot': [6, 'Sivan', 2],
+
+'Rosh Hashanah': [1, 'Tishrei', 2],
+
+'Yom Kippur': [10, 'Tishrei', 2], 
+
+'Sukkot': [15, 'Tishrei', 8],
+
+'Hoshana Rabbah': [21, 'Tishrei', 1],
+
+'Shemini Atzeret': [22, 'Tishrei', 1],
+	
+'Simchat Torah': [23, 'Tishrei', 1],
+
+'Hanukkah': [25, 'Kislev', 8],
+
+}
