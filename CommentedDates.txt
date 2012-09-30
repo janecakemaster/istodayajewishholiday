@@ -1,0 +1,36 @@
+{
+//should be 21st
+"Ta'anit Esther": [2013, 2, 23], 
+
+//Should be 14-26
+"Shavuot": [2013, 5, 15], 
+
+//Should be 18-25
+"Sukkot": [2013, 9, 19], 
+
+//should be 11/27-12/5
+"Hanukkah": [2013, 11, 28], 
+
+"Lag B'Omer": [2013, 4, 28], 
+
+"Hoshana Rabbah": [2013, 9, 25], 
+
+//should be 3/25-4/2
+"Passover": [2013, 3, 26], 
+
+//should be 26-27
+"Simchat Torah": [2013, 9, 27], 
+
+//should be 13-14
+"Yom Kippur": [2013, 9, 14], 
+
+//should be 4-6
+"Rosh Hashanah": [2013, 9, 5], 
+
+//should be 23-34
+"Purim": [2013, 2, 24], 
+
+"Tu B'Shevat": [2013, 1, 26], 
+
+//should be 25-26
+"Shemini Atzeret": [2013, 9, 26]}
