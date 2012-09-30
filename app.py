@@ -1,38 +1,29 @@
 import os
 import ast
-from flask import *
-from holidays import *
-
+from flask import Flask, request, redirect, url_for
+from holidays import Holidays
+import json
 
 app = Flask(__name__)
+hebdates = {}
+h = Holidays()
+with open('holidates.txt') as fd:
+	hebdates = fd.read()
+hebdates = ast.literal_eval(hebdates)
 
-@app.route('/')
+@app.route('/', methods=["GET"])
 def index():
+	if request.args.get('greg_year'):
+		return json.dumps(get_holidays())
 	return redirect(url_for('static', filename='index.html'))
 
-
-@app.route('/date')
-def get_page():
-    return request.args.get('date', '')
-
-# parse holidates.txt 
-# put those dates into function
-# store greg dates in an array
-# compare to current date
 def get_holidays():
-	h = Holidays()
-	# gregdate
-	hebdates = open('holidates.txt').read()
-	hebdates = ast.literal_eval(hebdates)
-	for key, items in hebdates.iteritems():
-		if len(items) == 3:
-			date = items[0]
-			month = items[1]
-			duration = items[2]
-			print key
-			# greg_year = 
-			# h.hebrew_to_gregorian(greg_year, month, date, 1)
-	return
+	year = int(request.args['greg_year'])
+	greg_dates = {}
+	for name, hebdate in hebdates.iteritems():
+		greg_dates[name] = [hebdate[0], hebdate[1]]
+		h.hebrew_to_gregorian(year, hebdate[0], hebdate[1])
+	return greg_dates
 
 @app.route('/static/<path:file_path>')
 def static_fetch(file_path):
@@ -41,7 +32,6 @@ def static_fetch(file_path):
 if __name__ == '__main__':
 	# Bind to PORT if defined, otherwise default to 5000.
 	port = int(os.environ.get('PORT', 5000))
+	app.debug = True
 	app.run(host='0.0.0.0', port=port)
-
-
 

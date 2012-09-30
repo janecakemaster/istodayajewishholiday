@@ -1,15 +1,15 @@
 {
-'Tu B\'Shevat': [15, 'Shevat', 2],
-'Ta\'anit Esther': [13, 'Adar', 1],
-'Purim': [14, 'Adar', 2],
-'Passover': [15, 'Nisan', 7],
-'Lag B\'Omer': [18, 'Iyar', 1],
-'Shavuot': [6, 'Sivan', 2],
-'Rosh Hashanah': [1, 'Tishrei', 2],
-'Yom Kippur': [10, 'Tishrei', 2],
-'Sukkot': [15, 'Tishrei', 8],
-'Hoshana Rabbah': [21, 'Tishrei', 1],
-'Shemini Atzeret': [22, 'Tishrei', 1],
-'Simchat Torah': [23, 'Tishrei', 1],
-'Hanukkah': [25, 'Kislev', 8]
+'Tu B\'Shevat': ['Shevat', 15, 2],
+'Ta\'anit Esther': ['Adar', 13, 1],
+'Purim': ['Adar', 14, 2],
+'Passover': ['Nisan', 15, 7],
+'Lag B\'Omer': ['Iyar', 18, 1],
+'Shavuot': ['Sivan', 6, 2],
+'Rosh Hashanah': ['Tishrei', 1, 2],
+'Yom Kippur': ['Tishrei', 10, 2],
+'Sukkot': ['Tishrei', 15, 8],
+'Hoshana Rabbah': ['Tishrei', 21, 1],
+'Shemini Atzeret': ['Tishrei', 22, 1],
+'Simchat Torah': ['Tishrei', 23, 1],
+'Hanukkah': ['Kislev', 25, 8]
 }
