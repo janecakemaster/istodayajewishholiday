@@ -1,7 +1,7 @@
 body{
 	font-family: "Helvetica", "Helvetica Neue", "Arial", "sans-serif";
-	color: #000;
-	background-color: #FFF;
+	color: #FFF;
+	background-color: #000;
 }
 
 div{
@@ -15,6 +15,11 @@ a{
 }
 
 #maintext{
-	font-size: 70px;
+	font-size: 150px;
 	font-weight: bold;
 }
+
+/*#myoutercontainer { position:relative }
+
+#myinnercontainer { position:absolute;top:50%; height:10em; margin-top:-5em } */
+#myoutercontainer2 { line-height:35em }
