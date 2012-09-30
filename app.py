@@ -22,8 +22,7 @@ def get_holidays():
 	curr_year = 2013
 	greg_dates = {}
 	for name, hebdate in hebdates.iteritems():
-		if hebdate[2]==1:
-			greg_dates[name] = h.hebrew_to_gregorian(curr_year, hebdate[0], hebdate[1])
+		greg_dates[name] = [h.hebrew_to_gregorian(curr_year, hebdate[0], hebdate[1]-1), hebdate[2]]
 	return greg_dates
 
 def check_date(year, month, date):
@@ -44,17 +43,16 @@ def check_date(year, month, date):
 			return {'month': month-1, 'date': date+31}
 		else:
 			return {'month': month, 'date': date}
-	if month==2 && isLeap==True:
+	if month==2 and isLeap==True:
 		if day < 29:
 			return {'month': month+1, 'date': date-29}
 		elif day > 0:
 			return {'month': month-1, 'date': date+29}
-	else
+	else:
 		if day < 28:
 			return {'month': month+1, 'date': date-28}
 		elif day > 0:
 			return {'month': month-1, 'date': date+28}
-
 
 
 @app.route('/static/<path:file_path>')

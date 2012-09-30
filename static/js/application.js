@@ -4,6 +4,8 @@ $(function(){
 	greg_month = date.getMonth();
 	greg_day = date.getDay();
 	greg_date = date.getDate();
+	greg_month = 2;
+	greg_date = 23;
 	isHoliday = false;
 	time = date.getTime();
 	$.ajax({
@@ -15,7 +17,7 @@ $(function(){
 			for(var key in d){
 				if(d.hasOwnProperty(key)){
 					currm = d[key][0][1];
-					currd = d[key][0][2]-1;
+					currd = d[key][0][2];
 					// catch 0 -1
 					dur = d[key][1];
 					console.log(d[key]);
