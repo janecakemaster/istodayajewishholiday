@@ -4,8 +4,10 @@ $(function(){
 	greg_month = date.getMonth();
 	greg_day = date.getDay();
 	greg_date = date.getDate();
-	// greg_month = 4;
-	// greg_date = 27;
+	greg_month = 9;
+	greg_date = 16;
+	// 9 16
+	// 5 9
 	isHoliday = false;
 	time = date.getTime();
 	$.ajax({
@@ -23,8 +25,12 @@ $(function(){
 					if (currm===greg_month && currd===greg_date && isHoliday===false) {
 						isHoliday=true;
 						$("#yesno").html("Yes");
-						$("#extras").html("<a href=\"http://bit.ly/W3IPe6\">" + key + "</a>");
-						// });
+						if(key === "Rosh Hashanah"){
+							$("#extras").html("<a href=\"http://bit.ly/QfbslU\">" + key + "</a>");
+						}
+						if(key === "Lag B'Omer"){
+							$("#extras").html("<a href=\"http://bit.ly/W3IPe6\">" + key + "</a>");
+						}
 					}
 				}
 			}
