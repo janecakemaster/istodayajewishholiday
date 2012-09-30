@@ -1,6 +1,7 @@
 import os
 from flask import Flask
 import holidays
+from holidays import Holidays
 
 
 app = Flask(__name__)
@@ -8,6 +9,18 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
     return 'Hello World!'
+
+# parse holidates.txt 
+# put those dates into function
+# store greg dates in an array
+# compare to current date
+
+def getHolidays()
+	hd = open('jewholidays.txt')
+	
+	hd.close()
+
+	return
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
