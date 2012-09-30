@@ -434,6 +434,7 @@ class Holidays:
         gd = self.hebrew_to_gregorian(self.time_list[YEAR], Tishri, 10)
         self.time_list[MONTH] = gd[MONTH]
         self.time_list[DAY] = gd[DAY]
+        return gd
 
 
     def set_yom_kippur_eve(self, year=None):

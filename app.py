@@ -1,6 +1,7 @@
 import os
 from flask import Flask
 import holidays
+from holidays import Holidays
 
 
 app = Flask(__name__)
