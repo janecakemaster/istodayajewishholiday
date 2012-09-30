@@ -18,13 +18,44 @@ def index():
 	return redirect(url_for('static', filename='index.html'))
 
 def get_holidays():
-	# year = int(request.args['greg_year'])
-	year = 2013
+	# curr_year = int(request.args['greg_year'])
+	curr_year = 2013
 	greg_dates = {}
 	for name, hebdate in hebdates.iteritems():
 		if hebdate[2]==1:
-			greg_dates[name] = h.hebrew_to_gregorian(year, hebdate[0], hebdate[1])
+			greg_dates[name] = h.hebrew_to_gregorian(curr_year, hebdate[0], hebdate[1])
 	return greg_dates
+
+def check_date(year, month, date):
+	thirtyone = (1,3,5,7,8,10,12)
+	thirty = (4,6,9,11)
+	isLeap = h.leap_gregorian(year)
+	if month in thirty:
+		if day > 30:
+			return {'month': month+1, 'date': date-30}
+		elif day < 0:
+			return {'month': month-1, 'date': date+30}
+		else:
+			return {'month': month, 'date': date}
+	if month in thirtyone:
+		if day > 31:
+			return {'month': month+1, 'date': date-31}
+		elif day < 0:
+			return {'month': month-1, 'date': date+31}
+		else:
+			return {'month': month, 'date': date}
+	if month==2 && isLeap==True:
+		if day < 29:
+			return {'month': month+1, 'date': date-29}
+		elif day > 0:
+			return {'month': month-1, 'date': date+29}
+	else
+		if day < 28:
+			return {'month': month+1, 'date': date-28}
+		elif day > 0:
+			return {'month': month-1, 'date': date+28}
+
+
 
 @app.route('/static/<path:file_path>')
 def static_fetch(file_path):
