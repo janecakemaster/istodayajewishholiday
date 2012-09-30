@@ -18,8 +18,8 @@ def index():
 	return redirect(url_for('static', filename='index.html'))
 
 def get_holidays():
-	curr_year = int(request.args['greg_year'])
-	# curr_year = 2013
+	# curr_year = int(request.args['greg_year'])
+	curr_year = 2013
 	greg_dates = {}
 	for name, hebdate in hebdates.iteritems():
 		greg_dates[name] = [h.hebrew_to_gregorian(curr_year, hebdate[0], hebdate[1]-1), hebdate[2]]
