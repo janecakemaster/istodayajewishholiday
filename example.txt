@@ -1,3 +1,0 @@
-{'Rosh Hashanna': [[1, 'Tishrei'], [2, 'Tishrei']],
-'Tu B'Shevat': [15, 'Shevat']
-}
