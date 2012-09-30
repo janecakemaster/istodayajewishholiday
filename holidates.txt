@@ -1,14 +1,15 @@
 {
-'Tu B\'Shevat': [11, 15, 2],
+'Tu B\'Shevat Day 1': [11, 15, 2],
+'Tu B\'Shevat Day 2': [11, 15, 2],
 'Ta\'anit Esther': [12, 13, 1],
 'Purim': [12, 14, 2],
-'Passover': [1, 15, 7],
+'Passover start': [1, 15, 7],
+'Passover end': []
 'Lag B\'Omer': [2, 18, 1],
 'Shavuot': [3, 6, 2],
 'Rosh Hashanah': [7, 1, 2],
 'Yom Kippur': [7, 10, 2],
 'Sukkot': [7, 15, 8],
-'Hoshana Rabbah': [7, 21, 1],
 'Shemini Atzeret': [7, 22, 1],
 'Simchat Torah': [7, 23, 1],
 'Hanukkah': [9, 25, 8]

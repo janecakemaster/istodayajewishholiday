@@ -22,7 +22,8 @@ def get_holidays():
 	year = 2013
 	greg_dates = {}
 	for name, hebdate in hebdates.iteritems():
-		greg_dates[name] = h.hebrew_to_gregorian(year, hebdate[0], hebdate[1])
+		if hebdate[2]==1:
+			greg_dates[name] = h.hebrew_to_gregorian(year, hebdate[0], hebdate[1])
 	return greg_dates
 
 @app.route('/static/<path:file_path>')
