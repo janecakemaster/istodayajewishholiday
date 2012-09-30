@@ -1,0 +1,20 @@
+body{
+	font-family: "Helvetica", "Helvetica Neue", "Arial", "sans-serif";
+	color: #000;
+	background-color: #FFF;
+}
+
+div{
+}
+
+a{
+}
+
+#container{
+	text-align: center;
+}
+
+#maintext{
+	font-size: 70px;
+	font-weight: bold;
+}

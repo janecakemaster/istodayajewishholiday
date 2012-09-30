@@ -17,11 +17,16 @@ def get_page():
 
 def get_holidays():
 	h = Holidays()
-	hebdates = open('jewholidays.txt').read
+	gregdates
+	hebdates = open('holidates.txt').read
 	for key, items in hebdates.iteritems():
-		year =
-		, hebrew_month, hebrew_day, year_is_gregorian=1
-		h.hebrew_to_gregorian
+		if len(items) == 3:
+			date = items[0]
+			month = items[1]
+			duration = items[2]
+			# greg_year = 
+			h.hebrew_to_gregorian(greg_year, month, date, 1)
+
 	hebdates.close()
 
 	return

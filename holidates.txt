@@ -23,6 +23,5 @@
 	
 'Simchat Torah': [23, 'Tishrei', 1],
 
-'Hanukkah': [25, 'Kislev', 8],
-
+'Hanukkah': [25, 'Kislev', 8]
 }
