@@ -27,7 +27,10 @@ $(function(){
 					if (currm===greg_month && currd===greg_date && isHoliday===false) {
 						isHoliday=true;
 						$("#yesno").html("Yes");
-						$("#extras").html("<a href=\"http://www.google.com/search?q=" + key + "\">" + key + "</a>");
+						hol = key;
+						reg = /\se[a-z]*/;
+						holidayname = hol.replace(reg, "");
+						$("#extras").html("<a href=\"http://www.google.com/search?q=" + holidayname + "\">" + holidayname + "</a>");
 					}
 				}
 			}
