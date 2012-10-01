@@ -18,12 +18,12 @@
 'Sukkot eight': [7, 22, 8],
 'Shemini Atzeret': [7, 22, 1],
 'Simchat Torah': [7, 23, 1],
-'Hanukkah': [9, 25, 8]
-'Hanukkah two': [9, 26, 8]
-'Hanukkah three': [9, 27, 8]
-'Hanukkah four': [9, 28, 8]
-'Hanukkah five': [9, 29, 8]
-'Hanukkah six': [9, 30, 8]
-'Hanukkah seven': [10, 1, 8]
+'Hanukkah': [9, 25, 8],
+'Hanukkah two': [9, 26, 8],
+'Hanukkah three': [9, 27, 8],
+'Hanukkah four': [9, 28, 8],
+'Hanukkah five': [9, 29, 8],
+'Hanukkah six': [9, 30, 8],
+'Hanukkah seven': [10, 1, 8],
 'Hanukkah eight': [10, 2, 8]
 }
