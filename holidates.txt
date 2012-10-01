@@ -6,8 +6,9 @@
 'Lag B\'Omer': [2, 18, 1],
 'Shavuot': [3, 6, 1],
 'Rosh Hashanah': [7, 1, 2],
+'Rosh Hashanah two': [7, 2, 2],
 'Yom Kippur': [7, 10, 1],
-'Sukkot one': [7, 15, 8],
+'Sukkot': [7, 15, 8],
 'Sukkot two': [7, 16, 8],
 'Sukkot three': [7, 17, 8],
 'Sukkot four': [7, 18, 8],
@@ -18,11 +19,11 @@
 'Shemini Atzeret': [7, 22, 1],
 'Simchat Torah': [7, 23, 1],
 'Hanukkah': [9, 25, 8]
-'Hanukkah': [9, 26, 8]
-'Hanukkah': [9, 27, 8]
-'Hanukkah': [9, 28, 8]
-'Hanukkah': [9, 29, 8]
-'Hanukkah': [9, 30, 8]
-'Hanukkah': [10, 1, 8]
-'Hanukkah': [10, 2, 8]
+'Hanukkah two': [9, 26, 8]
+'Hanukkah three': [9, 27, 8]
+'Hanukkah four': [9, 28, 8]
+'Hanukkah five': [9, 29, 8]
+'Hanukkah six': [9, 30, 8]
+'Hanukkah seven': [10, 1, 8]
+'Hanukkah eight': [10, 2, 8]
 }

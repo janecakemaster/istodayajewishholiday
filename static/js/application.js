@@ -4,6 +4,8 @@ $(function(){
 	greg_month = date.getMonth() + 1;
 	greg_day = date.getDay();
 	greg_date = date.getDate();
+	$("#yesno").html(" ");
+
 	// greg_month = 9;
 	// greg_date = 16;
 	// 9 16
@@ -32,5 +34,6 @@ $(function(){
 		}
 	});
 	if(isHoliday===false)
-		$("#yesno").html("No");
+		$("#yesno").html("No").delay();
+
 });
