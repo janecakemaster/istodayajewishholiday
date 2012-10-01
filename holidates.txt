@@ -2,13 +2,27 @@
 'Tu B\'Shevat': [11, 15, 1],
 'Ta\'anit Esther': [12, 13, 1],
 'Purim': [12, 14, 1],
-'Passover': [1, 15, 7],
+'Passover first': [1, 15, 7],
 'Lag B\'Omer': [2, 18, 1],
 'Shavuot': [3, 6, 1],
 'Rosh Hashanah': [7, 1, 2],
 'Yom Kippur': [7, 10, 1],
-'Sukkot': [7, 15, 8],
+'Sukkot one': [7, 15, 8],
+'Sukkot two': [7, 16, 8],
+'Sukkot three': [7, 17, 8],
+'Sukkot four': [7, 18, 8],
+'Sukkot five': [7, 19, 8],
+'Sukkot six': [7, 20, 8],
+'Sukkot seven': [7, 21, 8],
+'Sukkot eight': [7, 22, 8],
 'Shemini Atzeret': [7, 22, 1],
 'Simchat Torah': [7, 23, 1],
 'Hanukkah': [9, 25, 8]
+'Hanukkah': [9, 26, 8]
+'Hanukkah': [9, 27, 8]
+'Hanukkah': [9, 28, 8]
+'Hanukkah': [9, 29, 8]
+'Hanukkah': [9, 30, 8]
+'Hanukkah': [10, 1, 8]
+'Hanukkah': [10, 2, 8]
 }

@@ -1,11 +1,11 @@
 $(function(){
 	date = new Date();
 	greg_year = date.getFullYear();
-	greg_month = date.getMonth();
+	greg_month = date.getMonth() + 1;
 	greg_day = date.getDay();
 	greg_date = date.getDate();
-	greg_month = 9;
-	greg_date = 16;
+	// greg_month = 9;
+	// greg_date = 16;
 	// 9 16
 	// 5 9
 	isHoliday = false;
@@ -25,18 +25,12 @@ $(function(){
 					if (currm===greg_month && currd===greg_date && isHoliday===false) {
 						isHoliday=true;
 						$("#yesno").html("Yes");
-						if(key === "Rosh Hashanah"){
-							$("#extras").html("<a href=\"http://bit.ly/QfbslU\">" + key + "</a>");
-						}
-						if(key === "Lag B'Omer"){
-							$("#extras").html("<a href=\"http://bit.ly/W3IPe6\">" + key + "</a>");
-						}
+						$("#extras").html("<a href=\"http://www.google.com/search?q=" + key + "\">" + key + "</a>");
 					}
 				}
 			}
-			if(isHoliday===false){
-				$("#yesno").html("No");
-			}
 		}
 	});
+	if(isHoliday===false)
+		$("#yesno").html("No");
 });
