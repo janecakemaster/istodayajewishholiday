@@ -37,6 +37,6 @@ $(function(){
 		}
 	});
 	if(isHoliday===false)
-		$("#yesno").html("No").delay();
+		$("#yesno").html("No");
 
 });
