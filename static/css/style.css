@@ -2,9 +2,12 @@ body{
   background-color: #000;
   color: #FFF;
   font-family: "Helvetica", "Helvetica Neue", "Arial", "sans-serif";
+  height: 100%
 }
 
 #container{
+  height: auto !important;
+  margin: 0 auto -100px; 
   text-align: center;
 }
 
@@ -24,4 +27,13 @@ body{
   color: #FFF;
   font-size: .8em;
   text-decoration: none;
+}
+.footer, .push {
+  height: 100px; /* .push must be the same height as .footer */
+}
+
+.footer p{
+  color: #CCC;
+  font-size: .8em;
+  text-align: right;
 }
