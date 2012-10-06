@@ -1,11 +1,7 @@
 body{
-  font-family: "Helvetica", "Helvetica Neue", "Arial", "sans-serif";
-  color: #FFF;
   background-color: #000;
-}
-
-a{
-	color: #FFF
+  color: #FFF;
+  font-family: "Helvetica", "Helvetica Neue", "Arial", "sans-serif";
 }
 
 #container{
@@ -15,10 +11,17 @@ a{
 #container p{
   font-size: 150px;
   font-weight: bold;
+  margin-bottom: -5px;
+  padding: 0;
   vertical-align: middle;
-  line-height: 2em;
 }
 
 #extras{
   position: relative;
+}
+
+#extras a{
+  color: #FFF;
+  font-size: .8em;
+  text-decoration: none;
 }
