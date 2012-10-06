@@ -13,7 +13,7 @@
 'Lag B\'Omer': [2, 18, 1],
 'Shavuot': [3, 6, 1],
 'Rosh Hashanah': [7, 1, 2],
-'Rosh Hashanah two': [7, 2, 2],
+'Rosh Hashanah etwo': [7, 2, 2],
 'Yom Kippur': [7, 10, 1],
 'Sukkot': [7, 15, 8],
 'Sukkot etwo': [7, 16, 8],
