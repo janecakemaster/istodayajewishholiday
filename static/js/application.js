@@ -6,10 +6,6 @@ $(function(){
 	greg_date = date.getDate();
 	$("#yesno").html(" ");
 
-	// greg_month = 9;
-	// greg_date = 16;
-	// 9 16
-	// 5 9
 	isHoliday = false;
 	time = date.getTime();
 	$.ajax({
@@ -26,7 +22,7 @@ $(function(){
 					// add time check
 					if (currm===greg_month && currd===greg_date && isHoliday===false) {
 						isHoliday=true;
-						$("#yesno").html("Yes");
+						$("#yesno").html("YES");
 						hol = key;
 						reg = /\se[a-z]*/;
 						holidayname = hol.replace(reg, "");
@@ -37,6 +33,8 @@ $(function(){
 		}
 	});
 	if(isHoliday===false)
-		$("#yesno").html("No");
+		$("#yesno").html("NO");
+	else
+		$("#yesno").html("");
 
 });

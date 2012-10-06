@@ -6,8 +6,7 @@ body{
 }
 
 #container{
-  height: auto !important;
-  margin: 0 auto -100px; 
+  height: 100%;
   text-align: center;
 }
 
@@ -28,12 +27,16 @@ body{
   font-size: .8em;
   text-decoration: none;
 }
-.footer, .push {
-  height: 100px; /* .push must be the same height as .footer */
+#footer{
+  position: absolute;
+  bottom: 1px;
+  right: 5px;
 }
-
-.footer p{
+#footer p{
   color: #CCC;
   font-size: .8em;
+  font-weight: normal;
   text-align: right;
+  vertical-align: text-bottom;
+
 }
