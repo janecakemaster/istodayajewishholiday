@@ -27,14 +27,13 @@ $(function(){
 						reg = /\se[a-z]*/;
 						holidayname = hol.replace(reg, "");
 						$("#extras").html("<a href=\"http://www.google.com/search?q=" + holidayname + "\">" + holidayname + "</a>");
+						$("#footer").html("<p>Starst at sundown today</p>");
+					}
+					else if(isHoliday===false){
+						$("#yesno").html("NO");
 					}
 				}
 			}
 		}
 	});
-	if(isHoliday===false)
-		$("#yesno").html("NO");
-	else
-		$("#yesno").html("");
-
 });
